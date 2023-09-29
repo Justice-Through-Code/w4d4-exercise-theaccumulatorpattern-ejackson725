@@ -22,16 +22,26 @@ from typing import List
 
 def calculate_average_temperature(temperatures: List[float]) -> float:
      # 1.1 TODO: # Initialize an accumulator variable to keep track of the sum of temperatures.
-   
+    sum_temp = 0
+    for temp in temperatures:
+        sum_temp += temp 
+
+        
     
     # 1.2 TODO:# Iterate through the `temperatures` list, updating the accumulator with the current temperature.
 
     
     # 1.3 TODO: # Calculate and return the average temperature using the accumulated sum and the total number of readings.
+    if len(temperatures) == 0:
+        average = None
+    else:
+        average =  sum_temp/len(temperatures)
+    
 
-
+        return average
     
     # 1.3 TODO: return the average temperature
+
     
 
 #calculate_average_temperature()
